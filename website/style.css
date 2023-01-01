@@ -1,0 +1,51 @@
+body{
+  background-image: url('pictures/allah2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  margin-top: 20px;
+  width: calc(33.33% - 20px);
+  height: 210px;
+  border-radius: 20px;
+  background-color: rgb(80, 79, 79);
+  box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  text-align: center;
+  background-color: grey;
+  padding: 20px;
+  font-size: 40px;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.tanggal {
+  color: white;
+}
+
+.deskripsi {
+  font-size: 30px;
+  color: white;
+}
