@@ -1,47 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="website/main.js"></script>
-    <script src="https://use.fontawesome.com/f977aacf52.js"></script>
-    <link rel="stylesheet" href="website/style.css">
-    <title>Jadwal Sholat</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="website/style.css">
+  <script src="website/main.js"></script>
+  <title>Jadwal Sholat</title>
 </head>
 <body>
-    <center>
-    <h1>Jadwal Sholat Hari Ini</h1>
-    <h2>Bandung</h2>
-    <div class="tanggal" style="font-size: 20px;"></div><br></center>
-    <div class="container">
-        <div class="card">
-          <h2>Imsak</h2>
-          <div class="imsak deskripsi">
+  <header><h2>Jadwal Sholat Bandung</h2>
+  <h3 class="tanggal"></h3><br>
+  <button onclick="location.reload()">Refresh Halaman</button></header>
+  <div class="container">
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Imsak" style="--num:85;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="imsak"></h2>
+            </div>
           </div>
         </div>
-        <div class="card">
-            <h2>Subuh</h2>
-            <div class="subuh deskripsi">
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Subuh" style="--num:90;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
             </div>
-          </div><div class="card">
-            <h2>Dzuhur</h2>
-            <div class="dzuhur deskripsi">
-            </div>
-          </div><div class="card">
-            <h2>Ashar</h2>
-            <div class="ashar deskripsi">
-            </div>
-          </div><div class="card">
-            <h2>Maghrib</h2>
-            <div class="maghrib deskripsi">
-            </div>
-          </div><div class="card">
-            <h2>Isya</h2>
-            <div class="isya deskripsi">
+            <div class="number">              <h2 class="subuh"></h2>
             </div>
           </div>
+        </div>
       </div>
-      <h4>Maap buat simple page karena mepet deadline :)</h4>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Terbit" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="terbit"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Dhuha" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="dhuha"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Dzuhur" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="dzuhur"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Ashar" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="ashar"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Maghrib" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="maghrib"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="shadow">
+        <div class="content">
+          <div class="percent" data-text="Isya" style="--num:70;">
+            <div class="dot">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <cirle cx="70" cy="70" r="70"></cirle>
+              </svg>
+            </div>
+            <div class="number">
+              <h2 class="isya"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
