@@ -57,25 +57,21 @@ inputSearch.addEventListener('keyup',function(){
       .then(response => {
         const kota = response.kota;
         let listKota = '';
-        kota.forEach( k => {
-          listKota += `<a href="#" data-idkota="${k.id}" id="nama-kota">${k.nama}</a><br>`;
-        });
+       
         const namaKota = document.getElementsByClassName('card-list')[0];
+        kota.forEach(kota => {
+          const filterText = inputSearch.value.toLowerCase();
+          const itemText = kota.nama.toLowerCase();
+          if(itemText.indexOf(filterText) != -1){
+            listKota += `<a href="#" data-idkota="${kota.id}" id="nama-kota">${kota.nama}</a><br>`;
+          }
+        });
         namaKota.innerHTML = listKota;
 
         const isiKota = document.querySelectorAll('#nama-kota');
         isiKota.forEach( kota => {
-
-          const filterText = inputSearch.value.toLowerCase();
-          const itemText = kota.firstChild.textContent.toLowerCase();
-
-          if(itemText.indexOf(filterText) != -1){
-            kota.setAttribute("style", "display: block");
-          } else {
-            kota.setAttribute("style", "display: none !important");
-          }
-
           kota.addEventListener('click', function(){
+            console.log('kota')
             const idkota = this.dataset.idkota;
             const judulkota = this.textContent;
             window.localStorage.setItem('idkota', idkota);
@@ -83,15 +79,13 @@ inputSearch.addEventListener('keyup',function(){
             namaKota.classList.add('hidden-list');
             inputSearch.value = '';
             location.reload();
-          });
+          })
         });
-
         // console.log(kota)
       });
   } else {
     cardList.classList.add('hidden-list');
   }
-
 });
 
 getJadwalSholat();
