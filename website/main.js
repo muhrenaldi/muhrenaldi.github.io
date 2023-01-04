@@ -88,5 +88,4 @@ inputSearch.addEventListener('keyup',function(){
   }
 });
 
-getJadwalSholat() ;
-
+getJadwalSholat();
