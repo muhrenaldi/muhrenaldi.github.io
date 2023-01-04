@@ -23,7 +23,9 @@ function hari(){
 const tanggal = `${getYear}-${bulan()}-${hari()}`;
 
 const tampilKota = document.querySelector('.judul-kota');
+const tgl = document.getElementsByClassName('tanggal')[0]
 tampilKota.textContent = localStorage.judulkota
+tgl.textContent = localStorage.date
 
 function getJadwalSholat() {
   fetch('https://api.banghasan.com/sholat/format/json/jadwal/kota/' + parseInt(localStorage.idkota) + '/tanggal/' + tanggal)
@@ -38,7 +40,7 @@ function getJadwalSholat() {
     document.querySelector('.dzuhur').textContent = jadwal.dzuhur;
     document.querySelector('.maghrib').textContent = jadwal.maghrib;
     document.querySelector('.isya').textContent = jadwal.isya;
-    document.querySelector('.tanggal').textContent = jadwal.tanggal;
+    // document.querySelector('.tanggal').textContent = jadwal.tanggal;
   });
 }
 
@@ -79,6 +81,13 @@ inputSearch.addEventListener('keyup',function(){
             namaKota.classList.add('hidden-list');
             inputSearch.value = '';
             location.reload();
+
+            const inputDate = document.getElementById('inputDate').value;
+            const date = new Date(Date.parse(inputDate));
+            const isoDate = date.toISOString();
+            const formattedDate = isoDate.split('T')[0];
+            console.log(formattedDate); // Output: "2023-02-23"
+            localStorage.setItem('date', formattedDate);
           })
         });
         // console.log(kota)
